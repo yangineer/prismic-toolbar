@@ -21,12 +21,14 @@ async function listen() {
     await close();
     Preview.close();
     window.location = Config.location.href;
+    window.location.reload();
   }
   // Need to set cookie
   if (ref && ref !== cookie) {
     await displayLoading();
     Preview.set(ref);
     window.location = Config.location.href;
+    window.location.reload();
   }
 }
 
